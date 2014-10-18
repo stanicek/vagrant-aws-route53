@@ -13,7 +13,7 @@ module VagrantPlugins
         Config
       end
 
-      action_hook :assign_ip, :machine_action_up do |hook|
+      action_hook :assign_ip_to_route53, :machine_action_up do |hook|
         require_relative './action/set_ip'
         hook.after VagrantPlugins::AWS::Action::RunInstance, VagrantPlugins::AwsRoute53::Action::SetIp
         hook.after VagrantPlugins::AWS::Action::StartInstance, VagrantPlugins::AwsRoute53::Action::SetIp
