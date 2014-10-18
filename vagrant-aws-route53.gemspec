@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.description   = 'A Vagrant plugin assigns the IP of the instance which vagrant-aws provider created to a specific Route 53 record set.'
   s.require_path  = 'lib'
   s.files         = Dir.glob('lib/**/*') + %w(LICENSE README.md)
+
+  s.add_runtime_dependency 'aws-sdk'
 end

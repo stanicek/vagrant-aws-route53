@@ -20,7 +20,8 @@ GIT
 PATH
   remote: .
   specs:
-    vagrant-aws-route53 (0.2.1)
+    vagrant-aws-route53 (0.2.3)
+      aws-sdk
 
 GEM
   remote: https://rubygems.org/
