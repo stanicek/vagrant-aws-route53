@@ -4,7 +4,7 @@ require_relative 'ip_operations'
 module VagrantPlugins
   module AwsRoute53
     module Action
-      class SetIp < IpOperations
+      class UnsetIp < IpOperations
         def initialize(app, environment)
           @app = app
         end
@@ -19,8 +19,9 @@ module VagrantPlugins
             instance_id:       instance_id,
             hosted_zone_id:    hosted_zone_id,
             record_set:        record_set,
+            public_ip:         '0.0.0.0'
           ) do |instance_id, pubilic_ip, record_set|
-            environment[:ui].info("#{instance_id}'s #{pubilic_ip} has been assigned to #{record_set[0]}[#{record_set[1]}]")
+            environment[:ui].info("#{pubilic_ip} has been assigned to #{record_set[0]}[#{record_set[1]}]")
           end
 
           @app.call(environment)
