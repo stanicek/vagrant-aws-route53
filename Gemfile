@@ -10,4 +10,4 @@ group :plugins do
   gem 'vagrant-aws-route53', path: '.'
 end
 
-gem 'aws-sdk'
+gem 'aws-sdk-v1'

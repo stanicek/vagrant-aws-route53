@@ -23,8 +23,8 @@ GIT
 PATH
   remote: .
   specs:
-    vagrant-aws-route53 (0.3.0)
-      aws-sdk
+    vagrant-aws-route53 (0.3.1)
+      aws-sdk-v1
 
 GEM
   remote: https://rubygems.org/
@@ -34,8 +34,6 @@ GEM
       gyoku (>= 0.4.0)
       nokogiri
     awesome_print (1.2.0)
-    aws-sdk (1.56.0)
-      aws-sdk-v1 (= 1.56.0)
     aws-sdk-v1 (1.56.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -199,7 +197,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  aws-sdk
+  aws-sdk-v1
   vagrant!
   vagrant-aws (= 0.6.0)
   vagrant-aws-route53!

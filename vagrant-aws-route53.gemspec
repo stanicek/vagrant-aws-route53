@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.require_path  = 'lib'
   s.files         = Dir.glob('lib/**/*') + %w(LICENSE README.md)
 
-  s.add_runtime_dependency 'aws-sdk'
+  s.add_runtime_dependency 'aws-sdk-v1'
 end
