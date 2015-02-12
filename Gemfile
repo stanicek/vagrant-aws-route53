@@ -6,7 +6,7 @@ end
 
 group :plugins do
   gem 'awesome_print'
-  gem 'vagrant-aws'
+  gem 'vagrant-aws', '0.6.0'
   gem 'vagrant-aws-route53', path: '.'
 end
 
