@@ -12,6 +12,8 @@ module VagrantPlugins
         def call(environment)
           access_key_id, hosted_zone_id, instance_id, record_set, region, secret_access_key = config(environment)
 
+          return @app.call(environment) if hosted_zone_id.eql?(::Vagrant::Plugin::V2::Config::UNSET_VALUE) || record_set.eql?(::Vagrant::Plugin::V2::Config::UNSET_VALUE)
+
           set(
             access_key_id:     access_key_id,
             secret_access_key: secret_access_key,
