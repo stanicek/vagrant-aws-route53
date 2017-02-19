@@ -1,7 +1,7 @@
 require 'aws-sdk-v1'
 
 module VagrantPlugins
-  module AwsRoute53
+  module AwsRoute53Stanicek
     module Action
       class IpOperations
         private
